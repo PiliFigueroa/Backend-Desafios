@@ -13,17 +13,17 @@ class Product {
     }
 
     save = (object) => {
-            const { title, price, url } = object
-            const newProduct = new Product
-            newProduct.id = idGenerator(products)
-            newProduct.title = title
-            newProduct.price = price  
-            newProduct.url = url
+        const { title, price, url } = object
+        const newProduct = new Product
+        newProduct.id = idGenerator(products)
+        newProduct.title = title
+        newProduct.price = price  
+        newProduct.url = url
 
-            products.push(newProduct)
-            const json_products = JSON.stringify(products)
-            fs.writeFileSync('data/products.txt', json_products, 'utf-8')
-            return newProduct
+        products.push(newProduct)
+        const json_products = JSON.stringify(products)
+        fs.writeFileSync('data/products.txt', json_products, 'utf-8')
+        return newProduct
     }
 
     findById =  (id) => {
