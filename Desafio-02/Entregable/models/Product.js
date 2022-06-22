@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = fs.readFileSync('data/products.txt')
-const { idGenerator } = require('../helpers/id-generate')
+const { idGenerator } = require('../helpers/idGenerator')
 
 let products = JSON.parse(data)
 
